@@ -1,0 +1,10 @@
+[package]
+name = "person"
+version = "0.1.0"
+authors = ["irxground <irxnjhtchlnrw@gmail.com>"]
+
+[lib]
+name = "person"
+crate-type = ["staticlib"]
+
+[dependencies]
