@@ -1,4 +1,4 @@
 require "./libperson"
 
-p = Person.new("Taro", 21)
-p.greet
+person = Person.new("Taro", 21)
+pp person
