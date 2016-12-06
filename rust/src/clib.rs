@@ -10,13 +10,6 @@ pub unsafe fn person_new(name_ptr: *const u8, name_len: usize, age: u32) -> *mut
 }
 
 #[no_mangle]
-pub unsafe fn person_greet(person: *mut Person) {
-    if let Some(p) = person.as_ref() {
-        p.greet();
-    }
-}
-
-#[no_mangle]
 pub unsafe fn person_debug_callback(
     person: *mut Person,
     callback: fn(*const u8, usize, *mut u8),
