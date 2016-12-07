@@ -16,9 +16,9 @@ class Person
 
   def inspect(io : IO)
     LibPerson.person_debug_callback(@value, ->(str_ptr, str_len, closure) {
-      io_ = Box(IO).unbox(closure)
+      io_ = closure.as(typeof(io))
       io_.write Slice.new(str_ptr, str_len)
-    }, Box.box(io))
+    }, io.as(Void*))
   end
 
   def finalize
