@@ -1,6 +1,6 @@
 
 pub mod person;
-pub mod clib;
+pub mod capi;
 
 #[cfg(test)]
 mod tests {
